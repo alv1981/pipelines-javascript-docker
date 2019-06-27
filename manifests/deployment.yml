@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: alvpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: alvpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alvpipelinesjavascriptdocker 
+          image: acasve1981.azurecr.io/alvpipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
